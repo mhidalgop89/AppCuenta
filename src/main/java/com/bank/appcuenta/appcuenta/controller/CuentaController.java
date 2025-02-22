@@ -3,7 +3,7 @@ package com.bank.appcuenta.appcuenta.controller;
 import com.bank.appcuenta.appcuenta.models.entity.Cuenta;
 import com.bank.appcuenta.appcuenta.models.service.ICuentaService;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,8 +11,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cuentas")
+@AllArgsConstructor
 public class CuentaController {
-    @Autowired
+
     private ICuentaService iCuentaService;
 
     @GetMapping
